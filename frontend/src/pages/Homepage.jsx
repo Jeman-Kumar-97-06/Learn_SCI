@@ -17,7 +17,7 @@ const HomePage = () => {
       title: "AI Revolutionizing Modern Education",
       desc: "Schools are integrating artificial intelligence tools to personalize learning for students.",
       image:
-        "https://images.unsplash.com/photo-1606761568499-6d2451b23c36?auto=format&fit=crop&w=800&q=60",
+        "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
     },
   ];
 
@@ -110,7 +110,7 @@ const HomePage = () => {
 
       {/* Categories */}
       <section className="py-10 bg-gray-100 dark:bg-gray-800">
-        <h3 className="text-2xl font-semibold text-center mb-6">Explore Topics</h3>
+        <h3 className="text-2xl font-semibold text-center mb-6">Explore Articles & News</h3>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto px-4">
           {categories.map((cat) => (
             <div
