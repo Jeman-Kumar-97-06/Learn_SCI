@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import {Sun, Moon} from 'lucide-react';
+
+const x = import.meta.env.VITE_X
 
 const HomePage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,6 +23,7 @@ const HomePage = () => {
         "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
     },
   ];
+  console.log(x);
 
   const categories = [
     { name: "Science", color: "bg-blue-500" },
@@ -53,7 +57,7 @@ const HomePage = () => {
           onClick={() => setDarkMode(!darkMode)}
           className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
         >
-          {darkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
+          {darkMode ? <Sun/> : <Moon/>}
         </button>
       </nav>
 

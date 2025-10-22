@@ -82,7 +82,7 @@ export default function UserProfile() {
           </div>
         </section>
 
-        {/* Future Section: Recent Activity or Progress */}
+        {/* Future Section: Recent Activity or Progress
         <section>
           <h2 className="text-2xl font-semibold mb-4">Learning Progress</h2>
           <div className="bg-gray-100 dark:bg-[#1e293b] rounded-xl p-6">
@@ -93,7 +93,7 @@ export default function UserProfile() {
               <div className="bg-blue-600 h-3 rounded-full" style={{ width: "60%" }}></div>
             </div>
           </div>
-        </section>
+        </section> */}
       </motion.div>
     </div>
   );
