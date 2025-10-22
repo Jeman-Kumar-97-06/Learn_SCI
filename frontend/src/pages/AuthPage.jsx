@@ -1,8 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FcGoogle } from "react-icons/fc";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
+
+  const handleGoogleLogin = () => {
+    // You’ll later replace this with actual Google OAuth logic
+    console.log("Google login clicked!");
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-[#0b0f19] transition-colors">
@@ -15,6 +21,25 @@ export default function AuthPage() {
           {isLogin ? "Welcome Back" : "Create an Account"}
         </h2>
 
+        {/* --- Google Login --- */}
+        <button
+          onClick={handleGoogleLogin}
+          className="flex items-center justify-center gap-3 w-full border border-gray-300 dark:border-gray-700 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-[#1e293b] transition"
+        >
+          <FcGoogle className="text-2xl" />
+          <span className="text-gray-700 dark:text-gray-200 font-medium">
+            Continue with Google
+          </span>
+        </button>
+
+        {/* Separator */}
+        <div className="flex items-center my-6">
+          <div className="flex-1 h-px bg-gray-300 dark:bg-gray-700"></div>
+          <span className="mx-3 text-gray-500 dark:text-gray-400 text-sm">or</span>
+          <div className="flex-1 h-px bg-gray-300 dark:bg-gray-700"></div>
+        </div>
+
+        {/* --- Form --- */}
         <form className="space-y-4">
           {!isLogin && (
             <input
@@ -42,6 +67,7 @@ export default function AuthPage() {
           </button>
         </form>
 
+        {/* Toggle */}
         <p className="text-center mt-6 text-gray-600 dark:text-gray-400">
           {isLogin ? "New to the platform?" : "Already have an account?"}
           <button
