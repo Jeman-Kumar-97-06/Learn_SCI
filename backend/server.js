@@ -36,11 +36,16 @@ mcpserver.registerTool(
     {
         title:"News Articles",
         description:"News articles about science and technology",
-        inputSchema:{a:z.string()},
-        outputSchema:{result:z.array(z.object())}
     },
-    async (a=>{
-        const output = [];
-        const articles1 = await 
-    })
+    async () => {
+        try {
+            const techRes = await fetch(`https://api.worldnewsapi.com/search-news?categories=technology&language=en&number=10&api-key=${process.env.NEWS_API}`);
+            const sciRes  = await fetch(`https://api.worldnewsapi.com/search-news?categories=science&language=en&number=10&api-key=${process.env.NEWS_API}`);
+            const techData= await techRes.json();
+            const sciData = await sciRes.json();
+            const all_News= [...techData]
+        } catch {
+
+        }
+    }    
 )
